@@ -14,10 +14,11 @@ def main() -> None:
         if item:
             calculator = Calculator(user)
             hours_to_work, days_to_work = calculator.money_to_time(item.price).values()
-            print(f'To afford {item.name} you need to work:')
-            print(f'{hours_to_work} hours; That\'s {days_to_work} days in total.')
-        print('Invalid input!')
-        quit()
+            print(f'In order to afford {item.name}, you need to work:')
+            print(f'{hours_to_work} hours; That amounts to {days_to_work} days in total.')
+        else:
+            print('Invalid input!')
+            quit()
     else:
         print('Invalid input!')
         main()
