@@ -1,7 +1,6 @@
 import unittest
 
 from user import User
-from money2time import Calculator
 
 
 class TestUser(unittest.TestCase):
@@ -27,7 +26,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.user_3.hourly_wage, 284)
 
 
-    def test_calculator(self):
+    def test_money_to_time(self):
         hours, days = self.calc_1.money_to_time(25000).values()
         self.assertEqual(hours, 88)
         self.assertEqual(days, 11)
