@@ -29,9 +29,11 @@ class User:
         if is_valid_input(salary):
             working_hours = input('Working hours per day? (Press Enter to skip):\n')
             workdays = input('Workdays in a month? (Press Enter to skip):\n')
-            if is_valid_input(working_hours) and is_valid_input(workdays):
+            if not working_hours and not workdays:
+                return cls(int(salary))
+            elif is_valid_input(working_hours) and is_valid_input(workdays):
                 return cls(int(salary), int(working_hours), int(workdays))
-            return cls(int(salary))
+            return False
         return False
 
 
