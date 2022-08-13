@@ -34,6 +34,7 @@ class User:
             return cls(int(salary))
         return False
 
+
     @property
     def daily_wage(self) -> int:
         """Returns daily wage rounded to the nearest whole number"""

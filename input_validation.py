@@ -1,7 +1,6 @@
 def is_int(value) -> None:
     """ 
     Returns True if value is integer 
-    Else raises TypeError
     """
 
     try:
