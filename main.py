@@ -20,7 +20,7 @@ def main() -> None:
             print(f'{hours_to_work} hours; That amounts to {days_to_work} days in total.')
         else:
             print('Invalid input!')
-            quit()
+            main()
     else:
         print('Invalid input!')
         main()
