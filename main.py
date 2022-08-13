@@ -8,6 +8,8 @@ from item import Item
 
 
 def main() -> None:
+    print('Press CTRL + C to quit.\n')
+
     user = User.get()
     if user:
         item = Item.get()
@@ -23,7 +25,7 @@ def main() -> None:
         print('Invalid input!')
         main()
 
-    
+
 if __name__ == '__main__':
     try:
         main()

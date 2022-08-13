@@ -11,7 +11,7 @@ class Item:
 
 
     @classmethod
-    def get(cls) -> bool:
+    def get(cls):
         item_name = input('What do you want to buy? (Required):\n')
         if item_name and not is_int(item_name):
             item_price = input('How much does it cost? (Required):\n')
