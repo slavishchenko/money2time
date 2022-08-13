@@ -53,3 +53,19 @@ class User:
         if not self.working_hours:
             return round(self.daily_wage / self.WORKING_HOURS)
         return round(self.daily_wage / self.working_hours)
+
+    def money_to_time(self, price: int) -> dict:
+        """
+        Takes item price as an argument.
+        Calculates how many hours and days you have to work to earn 
+        that amount of money.
+        Returns dict object with hours and days keys.
+        """
+
+        hours = round(price / self.hourly_wage)
+        if not self.working_hours:
+            days = round(hours / self.WORKING_HOURS)
+        else:
+            days = round(hours / self.working_hours)
+
+        return {'hours':hours, 'days':days}

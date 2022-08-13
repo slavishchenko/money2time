@@ -16,6 +16,7 @@ def input_is_not_none(value) -> bool:
     return True if value else False
 
 def is_positive_number(value):
+    """Returns True if values is postive number"""
     return True if int(value) > 0 else False
 
 def is_valid_input(user_input) -> bool:

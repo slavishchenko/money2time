@@ -2,7 +2,6 @@ import sys
 import os
 import time
 
-from money2time import Calculator
 from user import User
 from item import Item
 
@@ -14,8 +13,7 @@ def main() -> None:
     if user:
         item = Item.get()
         if item:
-            calculator = Calculator(user)
-            hours_to_work, days_to_work = calculator.money_to_time(item.price).values()
+            hours_to_work, days_to_work = user.money_to_time(item.price).values()
             print(f'In order to afford {item.name}, you need to work:')
             print(f'{hours_to_work} hours; That amounts to {days_to_work} days in total.')
         else:
