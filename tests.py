@@ -9,11 +9,6 @@ class TestUser(unittest.TestCase):
         self.user_2 = User(100, 5, 10)
         self.user_3 = User(50000, 0, 0)
 
-        self.calc_1 = Calculator(self.user_1)
-        self.calc_2 = Calculator(self.user_2)
-        self.calc_3 = Calculator(self.user_3)
-
-
     def test_daily_wage(self):
         self.assertEqual(self.user_1.daily_wage, 2273)
         self.assertEqual(self.user_2.daily_wage, 10)
@@ -27,15 +22,15 @@ class TestUser(unittest.TestCase):
 
 
     def test_money_to_time(self):
-        hours, days = self.calc_1.money_to_time(25000).values()
+        hours, days = self.user_1.money_to_time(25000).values()
         self.assertEqual(hours, 88)
         self.assertEqual(days, 11)
 
-        hours, days = self.calc_2.money_to_time(100).values()
+        hours, days = self.user_2.money_to_time(100).values()
         self.assertEqual(hours, 50)
         self.assertEqual(days, 10)
 
-        hours, days = self.calc_3.money_to_time(25000).values()
+        hours, days = self.user_3.money_to_time(25000).values()
         self.assertEqual(hours, 88)
         self.assertEqual(days, 11)    
 
